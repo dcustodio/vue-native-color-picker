@@ -5,8 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-package": "vue-cli-service build --target lib --name vue-native-color-picker ./src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vue-native-color-picker.common.js",
+  "files":[
+    "dist/*",
+    "*.json"
+  ],
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11"

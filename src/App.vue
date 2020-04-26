@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <InputColorPicker  v-model="color" />
+    {{ color }}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import InputColorPicker from './components/InputColorPicker'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    InputColorPicker
+  },
+  data: function () {
+    return {
+      color: '#79c120'
+
+    }
   }
 }
 </script>
