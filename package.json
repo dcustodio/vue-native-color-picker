@@ -1,6 +1,6 @@
 {
   "name": "vue-native-color-picker",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -32,6 +32,6 @@
   },
   "repository": "git://github.com/dcustodio/vue-native-color-picker.git",
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   }
 }
