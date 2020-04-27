@@ -1,6 +1,7 @@
 {
   "name": "vue-native-color-picker",
-  "version": "1.0.0",
+  "author": "David Custódio",
+  "version": "1.0.1",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -30,11 +31,9 @@
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "repository": { 
+  "repository": {
     "type": "git",
-    "url": "https://github.com/dcustodio/vue-native-color-picker.git"
+    "url": "git+https://github.com/dcustodio/vue-native-color-picker.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  }
+  "homepage": "https://github.com/dcustodio/vue-native-color-picker#readme"
 }
