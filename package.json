@@ -1,13 +1,13 @@
 {
   "name": "vue-native-color-picker",
   "author": "David Custódio",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-package": "vue-cli-service build --target lib --name vue-native-color-picker ./src/index.js",
     "lint": "vue-cli-service lint",
-    "prepublishOnly": "build-package"
+    "prepublishOnly": "npm run build-package"
   },
   "main": "dist/vue-native-color-picker.common.js",
   "files": [
