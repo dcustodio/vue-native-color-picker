@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 
-    <InputColorPicker  v-model="color" />
+    <InputColorPicker  v-model="color"/>
     {{ color }}
   </div>
 </template>
@@ -16,7 +16,6 @@ export default {
   data: function () {
     return {
       color: '#79c120'
-
     }
   }
 }

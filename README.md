@@ -1,24 +1,30 @@
 # vue-native-color-picker
 
-## Project setup
+Basic color picker that uses the native HTML element [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color).
+
+## Install
 ```
-npm install
+npm install vue-native-color-picker
 ```
 
-### Compiles and hot-reloads for development
+## Use  
+
 ```
-npm run serve
+import InputColorPicker from 'vue-native-color-picker'
+
+new Vue({
+  components: {
+    InputColorPicker
+  },
+  data: function() {
+    return {
+      color: "#79c120"
+    };
+  }
+})
+
 ```
 
-### Compiles and minifies for production
 ```
-npm run build
+<InputColorPicker  v-model="color" />
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,12 +1,29 @@
 <template>
     <input
         class="icp__input"
-            v-bind:style="styleObject"
+            :style="styleObject"
             type="color"
-            @input="handleInput"
+            @input="$_icp_handleInput"
         />
 </template>
-<style lang="css">
+<script>
+export default {
+  name: 'InputcolorPicker',
+  data () {
+    return {
+      styleObject: {
+        backgroundColor: this.value
+      }
+    }
+  },
+  methods: {
+    $_icp_handleInput (e) {
+      this.$emit('input', e.target.value)
+    }
+  }
+}
+</script>
+<style lang="css" scoped>
 
     .icp__input {
         height: 25px;
@@ -35,20 +52,3 @@
         border-radius: 15px;
     }
 </style>
-<script>
-export default {
-  prop: ['value'],
-  data () {
-    return {
-      styleObject: {
-        backgroundColor: this.value
-      }
-    }
-  },
-  methods: {
-    handleInput (e) {
-      this.$emit('input', e.target.value)
-    }
-  }
-}
-</script>
