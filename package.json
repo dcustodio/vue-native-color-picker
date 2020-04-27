@@ -30,7 +30,10 @@
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "repository": "git://github.com/dcustodio/vue-native-color-picker.git",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/dcustodio/vue-native-color-picker.git"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }
