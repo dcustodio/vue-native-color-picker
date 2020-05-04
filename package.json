@@ -1,7 +1,7 @@
 {
   "name": "vue-native-color-picker",
   "author": "David Custódio",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
