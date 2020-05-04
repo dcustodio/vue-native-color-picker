@@ -9,8 +9,8 @@
     "lint": "vue-cli-service lint",
     "prepublishOnly": "npm run build-package"
   },
-  "main": "dist/inputColorPicker.umd.js",
-  "unpkg": "dist/inputColorPicker.umd.min.js",
+  "main": "dist/v-input-colorpicker.umd.js",
+  "unpkg": "dist/v-input-colorpicker.umd.min.js",
   "browser": {
     "./sfc": "src/components/InputColorPicker.vue"
   },
