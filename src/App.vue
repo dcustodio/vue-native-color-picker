@@ -1,11 +1,27 @@
 <template>
   <div id="app">
-
-    <InputColorPicker  v-model="color"/>
-    {{ color }}
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <label class="label">Click me:</label>
+      </div>
+      <div class="field-body">
+        <div class="control">
+          <InputColorPicker v-model="color" />
+        </div>
+      </div>
+    </div>
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <label class="label">Color:</label>
+      </div>
+      <div class="field-body">
+        <div class="control">
+          <input class="input" type="text" placeholder="color" v-model="color" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
 import InputColorPicker from './components/InputColorPicker'
 export default {
@@ -15,7 +31,7 @@ export default {
   },
   data: function () {
     return {
-      color: '#79c120'
+      color: '#0f4c81'
     }
   }
 }

@@ -2,6 +2,10 @@
 
 Lightweight color picker that uses the native HTML element [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color).
 
+---
+
+[Demo](https://dcustodio.github.io/vue-native-color-picker/)
+
 ## Install
 ```
 npm install vue-native-color-picker
