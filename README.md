@@ -1,20 +1,28 @@
 # vue-native-color-picker
 
-Basic color picker that uses the native HTML element [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color).
+Lightweight color picker that uses the native HTML element [input type color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/color).
 
 ## Install
 ```
 npm install vue-native-color-picker
 ```
 
-## Use  
+## Import 
 
+Globally:
+
+```
+import InputColorPicker from "./vue-input-color-picker";
+Vue.use(InputColorPicker);
+```
+
+Or locally:
 ```
 import InputColorPicker from 'vue-native-color-picker'
 
 new Vue({
   components: {
-    InputColorPicker
+    "v-input-colorpicker": InputColorPicker
   },
   data: function() {
     return {
@@ -25,6 +33,8 @@ new Vue({
 
 ```
 
+## Use
+
 ```
-<InputColorPicker  v-model="color" />
+<v-input-colorpicker  v-model="color" />
 ```

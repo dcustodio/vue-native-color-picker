@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'InputcolorPicker',
+  name: 'v-input-colorpicker',
   data () {
     return {
       styleObject: {

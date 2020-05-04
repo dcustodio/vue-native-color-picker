@@ -5,13 +5,18 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-package": "vue-cli-service build --target lib --name vue-native-color-picker ./src/index.js",
+    "build-package": "vue-cli-service build --target lib --modern --name v-input-colorpicker ./src/index.js",
     "lint": "vue-cli-service lint",
     "prepublishOnly": "npm run build-package"
   },
-  "main": "dist/vue-native-color-picker.common.js",
+  "main": "dist/inputColorPicker.umd.js",
+  "unpkg": "dist/inputColorPicker.umd.min.js",
+  "browser": {
+    "./sfc": "src/components/InputColorPicker.vue"
+  },
   "files": [
     "dist/*",
+    "src/components/*",
     "*.json"
   ],
   "dependencies": {
