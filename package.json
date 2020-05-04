@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "build-package": "vue-cli-service build --target lib --modern --name v-input-colorpicker ./src/index.js",
     "lint": "vue-cli-service lint",
-    "prepublishOnly": "npm run build-package"
+    "prepublishOnly": "npm run build-package",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "main": "dist/v-input-colorpicker.umd.js",
   "unpkg": "dist/v-input-colorpicker.umd.min.js",
@@ -35,6 +36,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "execa": "latest",
     "vue-template-compiler": "^2.6.11"
   },
   "repository": {
