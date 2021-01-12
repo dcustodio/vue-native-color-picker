@@ -6,7 +6,7 @@
       </div>
       <div class="field-body">
         <div class="control">
-          <InputColorPicker v-model="color" />
+          <InputColorPicker v-model="color"/>
         </div>
       </div>
     </div>
@@ -16,7 +16,8 @@
       </div>
       <div class="field-body">
         <div class="control">
-          <input class="input" type="text" placeholder="color" v-model="color" />
+          <input class="input" type="text" placeholder="color"
+          v-model="color" />
         </div>
       </div>
     </div>
