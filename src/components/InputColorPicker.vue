@@ -5,6 +5,7 @@
     type="color"
     v-bind:value="value"
     @input="$_icp_handleInput"
+    @change="$_icp_handleChange"
   />
 </template>
 <script>
@@ -21,6 +22,9 @@ export default {
   methods: {
     $_icp_handleInput (e) {
       this.$emit('input', e.target.value)
+    },
+    $_icp_handleChange (e) {
+      this.$emit('change', e.target.value)
     }
   }
 }
