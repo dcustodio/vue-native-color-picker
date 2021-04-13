@@ -44,3 +44,8 @@ new Vue({
 ```
 <v-input-colorpicker  v-model="color" />
 ```
+or if you wish to handle the values externally:
+
+```
+<v-input-colorpicker  v-model="color" @input="handleInput" @change="handleChange" />
+```

@@ -6,7 +6,7 @@
       </div>
       <div class="field-body">
         <div class="control">
-          <InputColorPicker v-model="color"/>
+          <InputColorPicker v-model="color"  @input="handleInput" @change="handleChange" />
         </div>
       </div>
     </div>
@@ -33,6 +33,14 @@ export default {
   data: function () {
     return {
       color: '#0f4c81'
+    }
+  },
+  methods: {
+    handleInput (value) {
+      console.log('You input', value)
+    },
+    handleChange (value) {
+      console.log('You picked', value)
     }
   }
 }
