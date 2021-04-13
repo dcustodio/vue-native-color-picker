@@ -76,7 +76,13 @@ new Vue({
               <p>Use</p>
               <pre><code>
 &lt;v-input-colorpicker  v-model="color" /&gt;
-              </code></pre>              
+              </code></pre>  
+              <p>or if you wish to handle the values externally:</p> 
+              <pre><code>
+&lt;v-input-colorpicker  v-model="color" @input="handleInput" @change="handleChange" /&gt;
+              </code></pre>   
+              
+              
             </div>
           </div>
 
