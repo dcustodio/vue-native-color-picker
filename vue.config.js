@@ -1,6 +1,6 @@
 module.exports = {
   css: {
-    extract: false
+    extract: false,
   },
-  publicPath: '/vue-native-color-picker/'
-}
+  publicPath: "/vue-native-color-picker/",
+};

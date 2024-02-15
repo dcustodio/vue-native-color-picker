@@ -1,3 +1,16 @@
+<script setup>
+import { ref } from "vue";
+import InputColorPicker from "./components/InputColorPicker.vue";
+
+const color = ref("#0f4c81");
+const handleInput = (e) => {
+  console.log("You input", e.target.value);
+};
+
+const handleChange = (e) => {
+  console.log("You picked", e.target.value);
+};
+</script>
 <template>
   <div id="app">
     <div class="field is-horizontal">
@@ -6,7 +19,11 @@
       </div>
       <div class="field-body">
         <div class="control">
-          <InputColorPicker v-model="color"  @input="handleInput" @change="handleChange" />
+          <InputColorPicker
+            v-model="color"
+            @input="handleInput"
+            @change="handleChange"
+          />
         </div>
       </div>
     </div>
@@ -16,35 +33,17 @@
       </div>
       <div class="field-body">
         <div class="control">
-          <input class="input" type="text" placeholder="color"
-          v-model="color" />
+          <input
+            v-model="color"
+            class="input"
+            type="text"
+            placeholder="color"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-import InputColorPicker from './components/InputColorPicker'
-export default {
-  name: 'App',
-  components: {
-    InputColorPicker
-  },
-  data: function () {
-    return {
-      color: '#0f4c81'
-    }
-  },
-  methods: {
-    handleInput (value) {
-      console.log('You input', value)
-    },
-    handleChange (value) {
-      console.log('You picked', value)
-    }
-  }
-}
-</script>
 
 <style>
 #app {
