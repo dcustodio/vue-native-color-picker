@@ -9,15 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
-          version: 12.x
+          node-version: "20"
       - name: Checkout branch
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v4
       - name: Clean install dependencies
         run: npm ci
-
       - name: Run deploy script
         run: |
           git config user.name "David Custódio" && git config user.email "davidlacustodio@gmail.com"

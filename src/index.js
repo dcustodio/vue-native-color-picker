@@ -1,7 +1,9 @@
-import InputColorPicker from "./components/InputColorPicker";
+import InputColorPicker from "./components/InputColorPicker.vue";
 
 export default {
   install: (app) => {
-    app.component("VInputColorpicker", InputColorPicker);
+    app.component("InputColorpicker", InputColorPicker);
   },
 };
+
+export { InputColorPicker };

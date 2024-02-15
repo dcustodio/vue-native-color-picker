@@ -9,11 +9,12 @@
     "build-package": "vue-cli-service build --target lib --modern --name v-input-colorpicker ./src/index.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "prepublishOnly": "npm run build-package",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.mjs",
     "prepare": "husky"
   },
-  "main": "dist/v-input-colorpicker.umd.js",
-  "unpkg": "dist/v-input-colorpicker.umd.min.js",
+  "main": "./dist/v-input-colorpicker.umd.js",
+  "module": "./dist/v-input-colorpicker.es.js",
+  "unpkg": "./dist/v-input-colorpicker.umd.js",
   "browser": {
     "./sfc": "src/components/InputColorPicker.vue"
   },
@@ -39,7 +40,8 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "3.2.5",
-    "vite": "^2.5.4"
+    "vite": "^2.5.4",
+    "vite-plugin-css-injected-by-js": "^3.4.0"
   },
   "repository": {
     "type": "git",
