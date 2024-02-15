@@ -1,14 +1,16 @@
 {
   "name": "vue-native-color-picker",
   "author": "David Custódio",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "build-package": "vue-cli-service build --target lib --modern --name v-input-colorpicker ./src/index.js",
-    "lint": "vue-cli-service lint",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "prepublishOnly": "npm run build-package",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
+    "prepare": "husky"
   },
   "main": "dist/v-input-colorpicker.umd.js",
   "unpkg": "dist/v-input-colorpicker.umd.min.js",
@@ -21,27 +23,30 @@
     "*.json"
   ],
   "dependencies": {
-    "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "vue": "^3.4.15"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.3.0",
-    "@vue/cli-plugin-eslint": "~4.3.0",
-    "@vue/cli-service": "~5.0.8",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
+    "@vitejs/plugin-vue": "^1.6.1",
+    "@vue/eslint-config-standard": "^8.0.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-vue": "^9.21.0",
     "execa": "latest",
-    "vue-template-compiler": "^2.6.11"
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "3.2.5",
+    "vite": "^2.5.4"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dcustodio/vue-native-color-picker.git"
   },
-  "homepage": "https://github.com/dcustodio/vue-native-color-picker#readme"
+  "homepage": "https://github.com/dcustodio/vue-native-color-picker#readme",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
 }

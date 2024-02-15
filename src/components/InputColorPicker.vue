@@ -1,34 +1,10 @@
-<template>
-  <input
-    class="icp__input"
-    :style="styleObject"
-    type="color"
-    v-bind:value="value"
-    @input="$_icp_handleInput"
-    @change="$_icp_handleChange"
-  />
-</template>
-<script>
-export default {
-  name: 'v-input-colorpicker',
-  props: ['value'],
-  data () {
-    return {
-      styleObject: {
-        backgroundColor: this.value
-      }
-    }
-  },
-  methods: {
-    $_icp_handleInput (e) {
-      this.$emit('input', e.target.value)
-    },
-    $_icp_handleChange (e) {
-      this.$emit('change', e.target.value)
-    }
-  }
-}
+<script setup>
+const color = defineModel({ default: "#FFFFFF", type: String });
 </script>
+<template>
+  <input v-model="color" class="icp__input" type="color" />
+</template>
+
 <style lang="css" scoped>
 .icp__input {
   height: 25px;
